@@ -1,0 +1,33 @@
+[
+    {
+        "product": "twix",
+        "price": 1.50,
+        "quantity": 5,
+        "maxQuantity": 10
+    },
+    {
+        "product": "mars",
+        "price": 1.50,
+        "quantity": 8,
+        "maxQuantity": 10
+    },
+    {
+        "product": "doritos",
+        "price": 1.00,
+        "quantity": 0,
+        "maxQuantity": 10
+    },
+    {
+        "product": "coca-cola",
+        "price": 1.75,
+        "quantity": 20,
+        "maxQuantity": 40
+    },
+    {
+        "product": "water",
+        "price": 2.00,
+        "quantity": 40,
+        "maxQuantity": 40
+    }
+
+]

@@ -1,0 +1,30 @@
+{
+  "name": "VendingMachine",
+  "version": "1.0.0",
+  "description": "___",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "jest-cli": "^23.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crathor/VendingMachine.git"
+  },
+  "keywords": [],
+  "author": "Cody Rathor <codyrathor@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crathor/VendingMachine/issues"
+  },
+  "homepage": "https://github.com/crathor/VendingMachine#readme"
+}
