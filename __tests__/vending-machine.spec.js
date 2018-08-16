@@ -1,10 +1,6 @@
 const VendingMachine = require('../lib/vending-machine.js')
-
+let vendingMachine = new VendingMachine('./data.json')
 describe('Vending Machine', () => {
-  let vendingMachine, processedData
-  beforeEach(() => {
-    vendingMachine = new VendingMachine('./data.json')
-  })
   describe('when requesting vending machine stock', () => {
     it('should return list of products and current quantity', () => {
       const result = vendingMachine.getCurrentStock()
@@ -13,18 +9,6 @@ describe('Vending Machine', () => {
         'mars: 8',
         'doritos: 0',
         'coca-cola: 20',
-        'water: 40'
-      ])
-    })
-  })
-  describe('when restocking vending machine', () => {
-    it('should return a list of products and their new quantity', () => {
-      const result = vendingMachine.restockMachine()
-      expect(result).toEqual([
-        'twix: 10',
-        'mars: 10',
-        'doritos: 10',
-        'coca-cola: 40',
         'water: 40'
       ])
     })
@@ -87,6 +71,18 @@ describe('Vending Machine', () => {
     it('should return product name and new price', () => {
       const result = vendingMachine.updatePrice('coca-cola', 2.0)
       expect(result).toEqual(['coca-cola', 2.0])
+    })
+  })
+  describe('when restocking vending machine', () => {
+    it('should return a list of products and their new quantity', () => {
+      const result = vendingMachine.restockMachine()
+      expect(result).toEqual([
+        'twix: 10',
+        'mars: 10',
+        'doritos: 10',
+        'coca-cola: 40',
+        'water: 40'
+      ])
     })
   })
 })
