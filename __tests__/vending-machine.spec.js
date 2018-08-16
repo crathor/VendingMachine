@@ -36,9 +36,9 @@ describe('Vending Machine', () => {
     })
   })
   describe('when purchasing an item that is out of stock', () => {
-    it('should return error', () => {
+    it('should return out of stock', () => {
       const result = vendingMachine.purchaseItem('doritos', 1.5)
-      expect(result).toEqual('error')
+      expect(result).toEqual('out of stock')
     })
   })
   describe('when purchasing an item with exact change', () => {
@@ -47,10 +47,16 @@ describe('Vending Machine', () => {
       expect(result).toEqual('twix')
     })
   })
+  describe('when try and purchase a product with no change given', () => {
+    it('should return price of product', () => {
+      const result = vendingMachine.purchaseItem('coca-cola')
+      expect(result).toEqual('1.75')
+    })
+  })
   describe('when purchasing an item with not enough change', () => {
-    it('should return error', () => {
+    it('should return price of product', () => {
       const result = vendingMachine.purchaseItem('twix', 1.25)
-      expect(result).toEqual('error')
+      expect(result).toEqual('1.50')
     })
   })
   describe('when purchasing an item with more than enough change', () => {
