@@ -31,7 +31,7 @@ describe('Vending Machine', () => {
       expect(result).toEqual('twix')
     })
   })
-  describe('when try and purchase a product with no change given', () => {
+  describe('when trying to purchase a product with no change given', () => {
     it('should return price of product', () => {
       const result = vendingMachine.purchaseItem('coca-cola')
       expect(result).toEqual('1.75')
