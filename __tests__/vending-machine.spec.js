@@ -14,16 +14,6 @@ describe('Vending Machine', () => {
       ])
     })
   })
-  describe('when requesting current vending machine float', () => {
-    it('should return a list of the current float', () => {
-      const result = vendingMachine.getCurrentFloat()
-      expect(result).toEqual([
-        ['QUARTER', 87.75],
-        ['LOONIES', 90.0],
-        ['TOONIES', 140.0]
-      ])
-    })
-  })
   describe('when purchasing an item that is out of stock', () => {
     it('should return out of stock', () => {
       const result = vendingMachine.purchaseItem('c', 1.5)
@@ -39,13 +29,13 @@ describe('Vending Machine', () => {
   describe('when trying to purchase a product with no change given', () => {
     it('should return price of product', () => {
       const result = vendingMachine.purchaseItem('d')
-      expect(result).toEqual('1.75')
+      expect(result).toEqual(1.75)
     })
   })
   describe('when purchasing an item with not enough change', () => {
     it('should return price remaining', () => {
       const result = vendingMachine.purchaseItem('a', 1.25)
-      expect(result).toEqual('0.25')
+      expect(result).toEqual(0.25)
     })
   })
   describe('when purchasing an item with more than enough change', () => {
@@ -53,7 +43,7 @@ describe('Vending Machine', () => {
       const result = vendingMachine.purchaseItem('d', 5.0)
       expect(result).toEqual({
         name: 'coca-cola',
-        change: [['TOONIES', 1], ['LOONIES', 1], ['QUARTER', 1]]
+        change: [['TOONIES', 1], ['LOONIES', 1], ['QUARTERS', 1]]
       })
     })
   })
@@ -87,11 +77,41 @@ describe('Vending Machine', () => {
       ])
     })
   })
+  describe('when changing an item slot', () => {
+    it('should return the slot and its updated object', () => {
+      let newItem = {
+        name: 'stu',
+        price: 5.0,
+        quantity: 10,
+        maxQuantity: 10
+      }
+      const result = vendingMachine.updateSlot('a', newItem)
+      expect(result).toEqual([
+        'slot: a',
+        {
+          name: 'stu',
+          price: 5.0,
+          quantity: 10,
+          maxQuantity: 10
+        }
+      ])
+    })
+  })
+  describe('when requesting current vending machine float', () => {
+    it('should return a list of the current float', () => {
+      const result = vendingMachine.getCurrentFloat()
+      expect(result).toEqual([
+        ['QUARTERS', 87.5],
+        ['LOONIES', 89.0],
+        ['TOONIES', 138.0]
+      ])
+    })
+  })
   describe('when resupplying vending machine float', () => {
     it('should return a list of the new float', () => {
       const result = vendingMachine.resupplyFloat()
       expect(result).toEqual([
-        ['QUARTER', 100.0],
+        ['QUARTERS', 100.0],
         ['LOONIES', 100.0],
         ['TOONIES', 200.0]
       ])
