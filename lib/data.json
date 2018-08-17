@@ -1,33 +1,39 @@
-[
-    {
-        "name": "twix",
-        "price": 1.50,
-        "quantity": 5,
-        "maxQuantity": 10
-    },
-    {
-        "name": "mars",
-        "price": 1.50,
-        "quantity": 8,
-        "maxQuantity": 10
-    },
-    {
-        "name": "doritos",
-        "price": 1.00,
-        "quantity": 0,
-        "maxQuantity": 10
-    },
-    {
-        "name": "coca-cola",
-        "price": 1.75,
-        "quantity": 20,
-        "maxQuantity": 40
-    },
-    {
-        "name": "water",
-        "price": 2.00,
-        "quantity": 40,
-        "maxQuantity": 40
+{
+     "products" : [
+        {
+            "name": "twix",
+            "price": 1.50,
+            "quantity": 5,
+            "maxQuantity": 10
+        },
+        {
+            "name": "mars",
+            "price": 1.50,
+            "quantity": 8,
+            "maxQuantity": 10
+        },
+        {
+            "name": "doritos",
+            "price": 1.00,
+            "quantity": 0,
+            "maxQuantity": 10
+        },
+        {
+            "name": "coca-cola",
+            "price": 1.75,
+            "quantity": 20,
+            "maxQuantity": 40
+        },
+        {
+            "name": "water",
+            "price": 2.00,
+            "quantity": 40,
+            "maxQuantity": 40
+        }
+    ],
+    "float": {
+        "current" : [["QUARTER", 87.75], ["ONE", 90.00], ["TWO", 140.00]],
+        "max" : [["QUARTER", 100.00], ["ONE", 100.00], ["TWO", 200.00]]
     }
 
-]
+}

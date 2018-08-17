@@ -1,5 +1,6 @@
 const VendingMachine = require('../lib/vending-machine.js')
 let vendingMachine = new VendingMachine('./data.json')
+
 describe('Vending Machine', () => {
   describe('when requesting vending machine stock', () => {
     it('should return list of products and current quantity', () => {
@@ -10,6 +11,16 @@ describe('Vending Machine', () => {
         'doritos: 0',
         'coca-cola: 20',
         'water: 40'
+      ])
+    })
+  })
+  describe('when requesting current vending machine float', () => {
+    it('should return a list of the current float', () => {
+      const result = vendingMachine.resupplyFloat()
+      expect(result).toEqual([
+        ['QUARTER', 87.75],
+        ['ONE', 90.0],
+        ['TWO', 140.0]
       ])
     })
   })
@@ -46,7 +57,7 @@ describe('Vending Machine', () => {
   describe('when purchasing an item with more than enough change', () => {
     it('should return a list of the correct change', () => {
       const result = vendingMachine.purchaseItem('coca-cola', 5.0)
-      expect(result).toEqual([['TOONIES', 1], ['LOONIES', 1], ['QUARTERS', 1]])
+      expect(result).toEqual(['coca-cola', '1 Toonie, 1 Loonie, 1 Quarter'])
     })
   })
   describe('when supplying a bill thats higher than $10', () => {
@@ -82,6 +93,16 @@ describe('Vending Machine', () => {
         'doritos: 10',
         'coca-cola: 40',
         'water: 40'
+      ])
+    })
+  })
+  describe('when resupplying vending machine float', () => {
+    it('should return a list of the new float', () => {
+      const result = vendingMachine.resupplyFloat()
+      expect(result).toEqual([
+        ['QUARTER', 100.0],
+        ['LOONIES', 100.0],
+        ['TOONIES', 200.0]
       ])
     })
   })
