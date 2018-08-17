@@ -50,7 +50,8 @@ This repository consists of two main files and one data file:
 
 ```vending-machine.js``` 
 
-        contains the javascript class of VendingMachine. It contains the necessary methods for completing each test outlined in `vending-machine-spec.js`.
+        contains the javascript class of VendingMachine. 
+        It contains the necessary methods for completing each test outlined in `vending-machine-spec.js`.
 
 `vending-machine-spec.js` 
 
