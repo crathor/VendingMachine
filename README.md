@@ -6,7 +6,11 @@ Mock coding interview question: `implement a vending machine in JavaScript.`
     The vending machine must be a Javascript class.
     No interface is required. Only tests to prove is works.
 ___
-### Requirements:
+
+## Dependancies
+[jest](https://jestjs.io/docs/en/api) for testing.
+
+___
 The project must:
  * Have at least 10 well-formed, passing tests
  * Contain a reasonably DRY (Don't Repeat Yourself) implementation, though the tests can be verbose
@@ -48,16 +52,16 @@ This repository consists of two main files and one data file:
 * `vending-machine.spec.js`
 * `data.json`
 
-```vending-machine.js``` 
+### vending-machine.js:
 
         contains the javascript class of VendingMachine. 
         It contains the necessary methods for completing each test outlined in `vending-machine-spec.js`.
 
-`vending-machine-spec.js` 
+### vending-machine-spec.js:
 
         contains of description of what tests are being run and their expected outcomes.
 
-`data.json` 
+### data.json:
 
         contains the mock data used for running the tests.
 
