@@ -7,8 +7,8 @@ Mock coding interview question: `implement a vending machine in JavaScript.`
     No interface is required. Only tests to prove is works.
 ___
 
-## Dependancies
-[jest](https://jestjs.io/docs/en/api) for testing.
+### Dependancies
+[Jest](https://jestjs.io/docs/en/api) for testing.
 
 ___
 The project must:
