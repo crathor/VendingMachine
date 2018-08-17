@@ -80,7 +80,7 @@ describe('Vending Machine', () => {
         'stu: 10',
         'mars: 8',
         'doritos: 0',
-        'coca-cola: 20',
+        'coca-cola: 19',
         'water: 40'
       ])
     })
