@@ -7,10 +7,12 @@ Mock coding interview question: `implement a vending machine in JavaScript.`
     No interface is required. Only tests to prove is works.
 ___
 
-### Dependancies
+### Dependancies:
 [Jest](https://jestjs.io/docs/en/api) for testing.
 
 ___
+
+### Requirements:
 The project must:
  * Have at least 10 well-formed, passing tests
  * Contain a reasonably DRY (Don't Repeat Yourself) implementation, though the tests can be verbose
