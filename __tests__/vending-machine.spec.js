@@ -2,18 +2,6 @@ const VendingMachine = require('../lib/vending-machine.js')
 let vendingMachine = new VendingMachine('./data.json')
 
 describe('Vending Machine', () => {
-  describe('when requesting vending machine stock', () => {
-    it('should return list of products and current quantity', () => {
-      const result = vendingMachine.getCurrentStock()
-      expect(result).toEqual([
-        'twix: 5',
-        'mars: 8',
-        'doritos: 0',
-        'coca-cola: 20',
-        'water: 40'
-      ])
-    })
-  })
   describe('when purchasing an item that is out of stock', () => {
     it('should return out of stock', () => {
       const result = vendingMachine.purchaseItem('c', 1.5)
@@ -65,18 +53,6 @@ describe('Vending Machine', () => {
       expect(result).toEqual('paper')
     })
   })
-  describe('when restocking vending machine', () => {
-    it('should return a list of products and their new quantity', () => {
-      const result = vendingMachine.restockMachine()
-      expect(result).toEqual([
-        'twix: 10',
-        'mars: 10',
-        'doritos: 10',
-        'coca-cola: 40',
-        'water: 40'
-      ])
-    })
-  })
   describe('when changing an item slot', () => {
     it('should return the slot and its updated object', () => {
       let newItem = {
@@ -97,6 +73,18 @@ describe('Vending Machine', () => {
       ])
     })
   })
+  describe('when requesting vending machine stock', () => {
+    it('should return list of products and current quantity', () => {
+      const result = vendingMachine.getCurrentStock()
+      expect(result).toEqual([
+        'stu: 10',
+        'mars: 8',
+        'doritos: 0',
+        'coca-cola: 20',
+        'water: 40'
+      ])
+    })
+  })
   describe('when requesting current vending machine float', () => {
     it('should return a list of the current float', () => {
       const result = vendingMachine.getCurrentFloat()
@@ -114,6 +102,18 @@ describe('Vending Machine', () => {
         ['QUARTERS', 100.0],
         ['LOONIES', 100.0],
         ['TOONIES', 200.0]
+      ])
+    })
+  })
+  describe('when restocking vending machine', () => {
+    it('should return a list of products and their new quantity', () => {
+      const result = vendingMachine.restockMachine()
+      expect(result).toEqual([
+        'stu: 10',
+        'mars: 10',
+        'doritos: 10',
+        'coca-cola: 40',
+        'water: 40'
       ])
     })
   })
