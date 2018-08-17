@@ -33,9 +33,13 @@ The project must:
 
 # Running Tests
 
-to run a test you must first ensure you are inside the repository then run the following command: ```jest```
+to run a test you must first ensure you are inside the repository then run the following command: 
 
-if you do not have jest installed globally you can instead run: ```npx jest``` assuming your `npm is version @5.2.0 or greater`
+```jest```
+
+if you do not have jest installed globally and your `npm is version @5.2.0 or greater`: 
+
+```npx jest```
 
 # Summary
 
@@ -44,11 +48,17 @@ This repository consists of two main files and one data file:
 * `vending-machine.spec.js`
 * `data.json`
 
-```vending-machine.js``` contains the javascript class of VendingMachine. It contains the necessary methods for completing each test outlined in `vending-machine-spec.js`.
+```vending-machine.js``` 
 
-`vending-machine-spec.js` contains of description of what tests are being run and their expected outcomes.
+        contains the javascript class of VendingMachine. It contains the necessary methods for completing each test outlined in `vending-machine-spec.js`.
 
-`data.json` contains the mock data used for running the tests.
+`vending-machine-spec.js` 
+
+        contains of description of what tests are being run and their expected outcomes.
+
+`data.json` 
+
+        contains the mock data used for running the tests.
 
 # Screenshots
 
