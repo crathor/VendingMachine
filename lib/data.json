@@ -1,36 +1,36 @@
 {
-     "products" : [
-        {
+     "slots" : {
+        "a" : {
             "name": "twix",
             "price": 1.50,
             "quantity": 5,
             "maxQuantity": 10
         },
-        {
+        "b":{
             "name": "mars",
             "price": 1.50,
             "quantity": 8,
             "maxQuantity": 10
         },
-        {
+        "c":{
             "name": "doritos",
             "price": 1.00,
             "quantity": 0,
             "maxQuantity": 10
         },
-        {
+        "d":{
             "name": "coca-cola",
             "price": 1.75,
             "quantity": 20,
             "maxQuantity": 40
         },
-        {
+        "e":{
             "name": "water",
             "price": 2.00,
             "quantity": 40,
             "maxQuantity": 40
         }
-    ],
+    },
     "float": {
         "current" : [["QUARTER", 87.75], ["LOONIES", 90.00], ["TOONIES", 140.00]],
         "max" : [["QUARTER", 100.00], ["LOONIES", 100.00], ["TOONIES", 200.00]]
