@@ -32,8 +32,8 @@
         }
     ],
     "float": {
-        "current" : [["QUARTER", 87.75], ["ONE", 90.00], ["TWO", 140.00]],
-        "max" : [["QUARTER", 100.00], ["ONE", 100.00], ["TWO", 200.00]]
+        "current" : [["QUARTER", 87.75], ["LOONIES", 90.00], ["TOONIES", 140.00]],
+        "max" : [["QUARTER", 100.00], ["LOONIES", 100.00], ["TOONIES", 200.00]]
     }
 
 }

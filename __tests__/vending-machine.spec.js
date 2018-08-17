@@ -16,11 +16,11 @@ describe('Vending Machine', () => {
   })
   describe('when requesting current vending machine float', () => {
     it('should return a list of the current float', () => {
-      const result = vendingMachine.resupplyFloat()
+      const result = vendingMachine.getCurrentFloat()
       expect(result).toEqual([
         ['QUARTER', 87.75],
-        ['ONE', 90.0],
-        ['TWO', 140.0]
+        ['LOONIES', 90.0],
+        ['TOONIES', 140.0]
       ])
     })
   })
