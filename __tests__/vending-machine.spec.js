@@ -50,7 +50,7 @@ describe('Vending Machine', () => {
   })
   describe('when purchasing an item with more than enough change', () => {
     it('should return product and change given', () => {
-      const result = vendingMachine.purchaseItem('coca-cola', 5.0)
+      const result = vendingMachine.purchaseItem('d', 5.0)
       expect(result).toEqual({
         name: 'coca-cola',
         change: [['TOONIES', 1], ['LOONIES', 1], ['QUARTER', 1]]
@@ -59,14 +59,14 @@ describe('Vending Machine', () => {
   })
   describe('when supplying a bill thats higher than $10', () => {
     it('should return the change given', () => {
-      const result = vendingMachine.purchaseItem('coca-cola', 20.0)
-      expect(result).toEqual('20.0')
+      const result = vendingMachine.purchaseItem('d', 20.0)
+      expect(result).toEqual(20.0)
     })
   })
   describe('when supplying a coin thats less than a nickel', () => {
     it('should return the change given', () => {
       const result = vendingMachine.purchaseItem('e', 0.01)
-      expect(result).toEqual('0.01')
+      expect(result).toEqual(0.01)
     })
   })
   describe('when not supplying the correct currency', () => {
