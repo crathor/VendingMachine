@@ -73,5 +73,19 @@ This repository consists of two main files and one data file:
 
 ![Tests](/screenshots/jest-test.png?raw=true)
 
+# Author
+
+##  Cody Rathor
+
+RED Academy student currently taking the App Development course.
+
+LinkedIn: [Cody Rathor](https://www.linkedin.com/in/cody-rathor-7557a212b/)
+
+
+Twitter : [@codyrathor](https://twitter.com/CodyRathor?lang=en)
+
+
+
+
 
 
