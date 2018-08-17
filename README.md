@@ -65,7 +65,7 @@ This repository consists of two main files and one data file:
 
 ## Test
 
-![Tests](//VendingMachine/screenshots/jest-test.png)
+![Tests](/screenshots/jest-test.png?raw=true)
 
 
 
