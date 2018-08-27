@@ -15,15 +15,15 @@ describe('Vending Machine', () => {
     })
   })
   describe('when trying to purchase a product with no change given', () => {
-    it('should return price of product', () => {
+    it('should return name of product and price of product', () => {
       const result = vendingMachine.purchaseItem('d')
-      expect(result).toEqual(1.75)
+      expect(result).toEqual({ name: 'coca-cola', change: 1.75 })
     })
   })
   describe('when purchasing an item with not enough change', () => {
-    it('should return price remaining', () => {
+    it('should return name of the product and price remaining', () => {
       const result = vendingMachine.purchaseItem('a', 1.25)
-      expect(result).toEqual(0.25)
+      expect(result).toEqual({ name: 'twix', change: 0.25 })
     })
   })
   describe('when purchasing an item with more than enough change', () => {
